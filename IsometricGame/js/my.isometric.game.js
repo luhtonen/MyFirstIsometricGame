@@ -14,6 +14,8 @@ $(function() {
 	
 	var phrase = "Click or tap the screen to start the game";
 	ctx.font = 'bold 16px Arial, sans-serif';
+	var mt = ctx.measureText(phrase);
+	var xcoord = (canvas.width / 2) - (mt.width / 2);
 	ctx.fillStyle = '#FFFFFF';
-	ctx.fillText(phrase, 10, 30);
+	ctx.fillText(phrase, xcoord, 30);
 });
