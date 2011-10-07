@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Example 0 - Image Draw</title>
+		<script>
+			window.onload = function() {
+				var canvas = document.getElementById('myCanvas');
+				var c = canvas.getContext('2d');
+				c.clearRect (0, 0, canvas.width, canvas.height);
+				console.log(canvas.width + ":" + canvas.height);
+				var img = new Image();
+				img.src = "images/logo.png";
+				c.drawImage(img, 0, 0);
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="300" height="300">
+			Your browser doesn't include supoort for the canvas tag.
+		</canvas>
+	</body>
+</html>
