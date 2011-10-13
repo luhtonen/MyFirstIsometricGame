@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <title>Canvas Example 4 (Detecting Colors)</title>
   <meta name="author" content="Eduard Luhtonen" />
+  <script src="js/jquery-1.6.3.min.js"></script>
   <script>
   	window.onload = function() {
   		var preview = document.getElementById('preview');
@@ -25,7 +26,9 @@
   		draw();
   		
   		function draw() {
-  			c.drawImage(building, 0, 0, canvas.width, canvas.height);
+  			$(building).load(function() {
+	  			c.drawImage(building, 0, 0, canvas.width, canvas.height);
+  			});
   		}
   		
   		function move(e) {

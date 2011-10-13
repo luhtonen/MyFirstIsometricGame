@@ -84,8 +84,9 @@ window.onload = function() {
 		}
 		
 		// Present the image
-		ctx.drawImage(logo.img, logo.x, logo.y, logo.img.width, logo.img.height);
-		
+		$(logoImage).load(function() {
+			ctx.drawImage(logo.img, logo.x, logo.y, logo.img.width, logo.img.height);
+		});
 		// Change color to black
 		ctx.fillStyle = '#000000';
 		ctx.font = 'bold 16px Arial, sans-serif';

@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Example 0 - Image Draw</title>
+		<script src="js/jquery-1.6.3.min.js"></script>
 		<script>
 			window.onload = function() {
 				var canvas = document.getElementById('myCanvas');
@@ -11,7 +12,9 @@
 				console.log(canvas.width + ":" + canvas.height);
 				var img = new Image();
 				img.src = "images/logo.png";
-				c.drawImage(img, 0, 0);
+				$(img).load(function() {
+					c.drawImage(img, 0, 0);
+				});
 			}
 		</script>
 	</head>
